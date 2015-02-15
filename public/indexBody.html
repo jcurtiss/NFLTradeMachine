@@ -1,0 +1,46 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div ng-if="pageView == 'trade'">
+        <label for="tradeTeamOne">Team One</label>
+        <select id="tradeTeamOne" ng-model="tradeTeamOne">
+            <option value="{{ team }}"
+                    ng-repeat="team in nfl.teams">{{ team.name }}</option>
+        </select>
+        <label for="tradeTeamTwo">Team Two</label>
+        <select id="tradeTeamTwo" ng-model="tradeTeamTwo">
+            <option value="{{ team }}"
+                    ng-repeat="team in nfl.teams">{{ team.name }}</option>
+        </select>
+    </div>
+    <div ng-if="pageView == 'teams'">
+        <div ng-if="currentTeam == ''">Select a team from the sidebar or filter through players</div>
+        <h2 class="sub-header" ng-if="currentTeam != ''">
+            {{ currentTeam }}
+            <input position="inline"
+                   id="searchBox"
+                   placeholder="Filter"
+                   class="pull-right form-control"
+                   type="text"
+                   ng-model="searchText"
+                   ng-minlength="1"
+                   style="width: 200px; font-weight: normal;">
+        </h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-if="currentTeam != ''" ng-repeat="player in currentTeamInfo.players | filter: searchText">
+                        <td>{{ player.number }}</td>
+                        <td>{{ player.name }}</td>
+                        <td>{{ player.position }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

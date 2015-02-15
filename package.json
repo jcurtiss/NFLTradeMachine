@@ -1,0 +1,15 @@
+{
+  "name": "NFLTradeMachine",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcurtiss/NFLTradeMachine.git"
+  },
+  "author": "Jeremy Curtiss",
+  "homepage": "https://github.com/jcurtiss/NFLTradeMachine",
+  "dependencies": {
+      "express": "4.11.2"
+  }
+}

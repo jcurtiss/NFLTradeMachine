@@ -1,0 +1,34 @@
+{
+    "teams": [
+        {
+            "name": "Chicago Bears",
+            "players": [
+                {
+                    "name": "Kyle Long",
+                    "position": "RG",
+                    "number": 75
+                },
+                {
+                    "name": "Charles Tillman",
+                    "position": "CB",
+                    "number": 33
+                }
+            ]
+        },
+        {
+            "name": "Green Bay Packers",
+            "players": [
+                {
+                    "name": "Aaron Rodgers",
+                    "position": "QB",
+                    "number": 12
+                },
+                {
+                    "name": "Jordy Nelson",
+                    "position": "WR",
+                    "number": 87
+                }
+            ]
+        }
+    ]
+}
